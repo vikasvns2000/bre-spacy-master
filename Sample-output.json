@@ -1,0 +1,282 @@
+
+D:\Ananth\Allstate\spacy\source>python bre.py
+pipes...  ['tagger', 'parser', 'ner']
+Root element :  [] set
+checkin condtion for nlu.find_tokens_for_be.. set
+from nlu: [if, the, Vehicle, Original, Inception, date, the, existing, policy, valid, value, has, None]
+conditions... [if, the, Vehicle, Original, Inception, date, the, existing, policy, valid, value, has]
+attrs in get_attr_neg []
+Root element :  [] set
+checkin condtion for nlu.find_tokens_for_be.. set
+from nlu: [Otherwise, None]
+conditions... [Otherwise]
+[{"rule_action": "$set", "rule_actors": ["$$Start Date"], "rule_valid_values": {"value": ["$$Vehicleeee Original Inception date"], "value_uom": "$None"}, "rule_applicability": ["$ALL"], "rule_conditions": [{"condition": "$if", "action": "$has", "attributes": ["the", "$$Vehicle Original Inception date", "the", "existing", "$$policy", "valid", "$$value"], "attr_newhas": {"left_side": "$$policy.$$Vehicle Original Inception date", "right_side": "{'attr_negation': [[], [], [], [], [(None, None, None)]], 'expression': '', 'dobj_acl': [['$$value'], [None]], 'prep_pobj': {}}"}}]}, {"rule_action": "$set", "rule_actors": ["(PRON)", "It"], "rule_valid_values": {"value": ["$$Effective date"], "value_uom": "$None"}, "rule_applicability": ["$ALL"], "rule_conditions": [{"condition": "$Otherwise"}]}]
+Root element :  [] set
+checkin condtion for nlu.find_tokens_for_be.. set
+applicability ents form: ['$$endorsements']
+from nlu: [If, the, Affinity, is, deleted, None]
+conditions... [If, the, Affinity, is, deleted]
+attrs in get_attr_neg []
+Root element :  [] set
+checkin condtion for nlu.find_tokens_for_be.. set
+from nlu: [If, the, number, days, Policy, Inception, date, greater, than, 30, days, then, is, None]
+conditions... [If, the, number, days, Policy, Inception, date, greater, than, 30, days, then, is]
+attrs in get_attr_neg [days]
+Root element :  [] is
+checkin condtion for nlu.find_tokens_for_be.. be
+calling nlu.find_tokens_for_be.. using right_side approach
+attrs in get_attr_neg []
+for be... objects list is: []
+expression (attr & neg) is...  & UOM  None
+attrs in get_attr_neg []
+expression (conditons formatted) is.. {'left_side': 'that', 'right_side': "{'attr_negation': [[], [], [], [], [(None, None, None)]], 'expression': '', 'dobj_acl': [[], []], 'prep_pobj': {}}"}
+from nlu: [If, the, number, days, Policy, Inception, date, less, than, 30, days, is, None]
+conditions... [If, the, number, days, Policy, Inception, date, less, than, 30, days, is]
+attrs in get_attr_neg [days]
+Root element :  [] set
+checkin condtion for nlu.find_tokens_for_be.. set
+applicability ents form: ['$$New Business']
+from nlu: [If, it, a, Primary, Policy, MRP, is, None, If, the, Multiple, Record, Policy, Code, not, ", S, and, is, None, If, secondary, MRP, policy, affinity, relationship, has, None]
+conditions... [If, it, a, Primary, Policy, MRP, is]
+attrs in get_attr_neg [Policy, Policy]
+conditions... [If, the, Multiple, Record, Policy, Code, not, ", S, and, is]
+attrs in get_attr_neg [S]
+conditions... [If, secondary, MRP, policy, affinity, relationship, has]
+attrs in get_attr_neg []
+Root element :  [] set
+checkin condtion for nlu.find_tokens_for_be.. set
+from nlu: [If, secondary, policy, MRP, does, not, affinity, relationship, have, None]
+conditions... [If, secondary, policy, MRP, does, not, affinity, relationship, have]
+attrs in get_attr_neg []
+Root element :  [] is
+checkin condtion for nlu.find_tokens_for_be.. be
+calling nlu.find_tokens_for_be.. using right_side approach
+attrs in get_attr_neg [S]
+expression (attr & neg) is...  & UOM S None
+attrs in get_attr_neg [S]
+expression (conditons formatted) is.. {'left_side': '$$Multiple Record Policy Code', 'right_side': "{'attr_negation': [['S'], [], [], [], [(None, None, None)]], 'expression': 'S', 'dobj_acl': [[], []], 'prep_pobj': {}}"}
+from nlu: []
+Root element :  [] set
+checkin condtion for nlu.find_tokens_for_be.. set
+from nlu: [If, the, affinity, relationship, is, with, associated, None]
+conditions... [If, the, affinity, relationship, is, with, associated]
+attrs in get_attr_neg []
+Root element :  [] set
+checkin condtion for nlu.find_tokens_for_be.. set
+from nlu: [If, the, affinity, relationship, is, not, with, associated, None]
+conditions... [If, the, affinity, relationship, is, not, with, associated]
+attrs in get_attr_neg []
+[{"rule_action": "$set", "rule_actors": ["$$Affinity Origination Code"], "rule_valid_values": {"value": ["$$Blank"], "value_uom": "$None"}, "rule_applicability": ["$$endorsements"], "rule_conditions": [{"condition": "$If", "action": "$deleted", "attributes": ["the", "$$Affinity", "is"], "attr_newdeleted": {"left_side": "$$Affinity", "right_side": "{'attr_negation': [[], [], [], [], [(None, None, None)]], 'expression': '', 'dobj_acl': [[], []], 'prep_pobj': {}}"}}]}, {"rule_action": "$set", "rule_actors": ["$$Origination Code"], "rule_valid_values": {"value": ["E"], "value_uom": "$None"}, "rule_applicability": ["$$endorsements"], "rule_conditions": [{"condition": "$If", "action": "$is", "attributes": ["the", "$$number", "$$days", "$$Policy Inception date", "greater", "than", "30", "$$days", "then"], "attr_newis": {"left_side": "$$days.$$number", "extra_pobj_date": {"condition": "$between", "operands": ["$$Policy Inception date", "$$Endorsement Effective Date"], "conds": ["and"]}, "right_side": "{'attr_negation': [['$$days'], [], [], ['then'], [(greater, than, 30)]], 'expression': '$then($greater than(30))', 'expression_uom': '$$days', 'dobj_acl': [[], []], 'prep_pobj': {}}"}}]}, {"rule_action": "$is", "rule_actors": ["(ADJ)", "that"], "rule_valid_values": {"value": [], "value_uom": "$None"}, "rule_applicability": ["$$endorsements"], "rule_conditions": [{"condition": "$If", "action": "$is", "attributes": ["the", "$$number", "$$days", "$$Policy Inception date", "less", "than", "30", "$$days"], "attr_newis": {"left_side": "$$days.$$number", "extra_pobj_date": {"condition": "$between", "operands": ["$$Policy Inception date", "$$Endorsement Effective Date"], "conds": ["and"]}, "right_side": "{'attr_negation': [['$$days'], [], [], [], [(less, than, 30)]], 'expression': '$less than(30)', 'expression_uom': '$$days', 'dobj_acl': [[], []], 'prep_pobj': {}}"}}]}, {"rule_action": "$set", "rule_actors": ["$$Affinity Origination Code"], "rule_valid_values": {"value": ["$$values"], "value_uom": "$None"}, "rule_clause_for_values": {"idx_0": ["that", "are", "already", "present", "in", "the", "associated", "policy"]}, "rule_applicability": ["$$New Business"], "rule_conditions": [{"condition": "$If", "action": "$is", "attributes": ["it", "a", "$$Primary Policy", "$$MRP"], "attr_newis": {"left_side": "it", "right_side": "{'attr_negation': [['$$Primary Policy', '$$Secondary Policy'], [or], [MRP, MRP], [], [(None, None, None), (None, None, None)]], 'expression': '$or($$MRP.$$Primary Policy$$MRP.$$Secondary Policy)', 'dobj_acl': [[], []], 'prep_pobj': {}}"}}, {"condition": "$If", "action": "$is", "attributes": ["the", "$$Multiple Record Policy Code", "not", "\"", "S"], "attr_newis": {"left_side": "$$Multiple Record Policy Code", "right_side": "{'attr_negation': [['S'], [], [], ['not'], [(None, None, None)]], 'expression': '$not(S)', 'dobj_acl': [[], []], 'prep_pobj': {}}"}}, {"condition": "$If", "action": "$has", "attributes": ["$$secondary policy", "$$MRP", "$$affinity relationship"], "attr_newhas": {"left_side": "$$MRP.$$secondary policy", "right_side": "{'attr_negation': [[], [], [], [], [(None, None, None)]], 'expression': '', 'dobj_acl': [['$$affinity relationship'], [associated]], 'prep_pobj': {}}"}}]}, {"rule_action": "$set", "rule_actors": ["$$Affinity Relation Codes", "$$Affinity Card Number", "$$Affinity Origination Code"], "rule_valid_values": {"value": ["$$values"], "value_uom": "$None"}, "rule_clause_for_values": {"idx_0": ["that", "are", "already", "present", "in", "the", "associated", "policy"]}, "rule_applicability": ["$$New Business"], "rule_conditions": [{"condition": "$If", "action": "$have", "attributes": ["$$secondary policy", "$$MRP", "does", "not", "$$affinity relationship"], "attr_newhave": {"left_side": "$$MRP.$$secondary policy", "right_side": "{'attr_negation': [[], [], [], ['do', 'not'], [(None, None, None)]], 'expression': '$do not()', 'dobj_acl': [['$$affinity relationship'], [associated]], 'prep_pobj': {}}"}}]}, {"rule_action": "$is", "rule_actors": ["$$Multiple Record Policy Code"], "rule_valid_values": {"value": ["S"], "value_uom": "$None"}, "rule_applicability": ["$$New Business"]}, {"rule_action": "$set", "rule_actors": ["$$Affinity Origination Code"], "rule_valid_values": {"value": ["$$value"], "value_uom": "$None"}, "rule_clause_for_values": {"idx_0": ["that", "is", "already", "present", "in", "the", "policy"]}, "rule_applicability": ["$$New Business"], "rule_conditions": [{"condition": "$If", "action": "$associated", "attributes": ["the", "$$affinity relationship", "is", "with"], "attr_newassociated": {"left_side": "$$affinity relationship", "right_side": "{'attr_negation': [[], [], [], [], [(None, None, None)]], 'expression': '', 'dobj_acl': [[], []], 'prep_pobj': {with: [[policy], [], [None]]}}"}}]}, {"rule_action": "$set", "rule_actors": ["$$Affinity Relation Codes", "$$Affinity Card Number", "$$Affinity Origination Code"], "rule_valid_values": {"value": ["$$values"], "value_uom": "$None"}, "rule_clause_for_values": {"idx_0": ["that", "are", "already", "present", "in", "the", "associated", "policy"]}, "rule_applicability": ["$$New Business"], "rule_conditions": [{"condition": "$If", "action": "$associated", "attributes": ["the", "$$affinity relationship", "is", "not", "with"], "attr_newassociated": {"left_side": "$$affinity relationship", "right_side": "{'attr_negation': [[], [], [], ['not'], [(None, None, None)]], 'expression': '$not()', 'dobj_acl': [[], []], 'prep_pobj': {with: [[policy], [], [None]]}}"}}]}]
+Root element :  [] set
+checkin condtion for nlu.find_tokens_for_be.. set
+applicability ents form: ['$$rating plan']
+from nlu: [If, the, age, the, driver, less, than, 25, years, and, is, None, if, the, marital, the, driver, status, is, None, If, Smart, Student, discount, proof, is, neither, nor, received, None, validated, None]
+conditions... [If, the, age, the, driver, less, than, 25, years, and, is]
+attrs in get_attr_neg [years]
+conditions... [if, the, marital, the, driver, status, is]
+attrs in get_attr_neg []
+conditions... [If, Smart, Student, discount, proof, is, neither, nor, received]
+attrs in get_attr_neg []
+conditions... [validated]
+Root element :  [] set
+checkin condtion for nlu.find_tokens_for_be.. set
+from nlu: [Else, None]
+conditions... [Else]
+[{"rule_action": "$set", "rule_actors": ["$$smart student code"], "rule_valid_values": {"value": ["A"], "value_uom": "$None"}, "rule_applicability": ["$$rating plan"], "rule_conditions": [{"condition": "$If", "action": "$is", "attributes": ["the", "$$age", "the", "$$driver", "less", "than", "25", "$$years"], "attr_newis": {"left_side": "$$driver.$$age", "right_side": "{'attr_negation': [['$$years'], [], [], [], [(less, than, 25)]], 'expression': '$less than(25)', 'expression_uom': '$$years', 'dobj_acl': [[], []], 'prep_pobj': {}}"}}, {"condition": "$if", "action": "$is", "attributes": ["the", "$$marital status", "the", "$$driver"], "attr_newis": {"left_side": "$$driver.$$marital status", "right_side": "{'attr_negation': [[], [], [], [], [(valid, None, None)]], 'expression': '$valid', 'dobj_acl': [[], []], 'prep_pobj': {}}"}}, {"condition": "$If", "action": "$received", "attributes": ["$$Smart Student discount proof", "is", "neither"], "attr_newreceived": {"left_side": "$$Smart Student discount proof", "right_side": "{'attr_negation': [[], [], [], [], [(None, None, None)]], 'expression': '', 'dobj_acl': [[], []], 'prep_pobj': {}}"}}, {"condition": "$validated"}]}, {"rule_action": "$set", "rule_actors": ["$$smart student code"], "rule_valid_values": {"value": ["$$Empty Space"], "value_uom": "$None"}, "rule_applicability": ["$$rating plan"], "rule_conditions": [{"condition": "$Else"}]}]
+Root element :  ['can', 'not', 'be'] left
+checkin condtion for nlu.find_tokens_for_be.. leave
+calling nlu.find_tokens_for_be.. using right_side approach
+attrs in get_attr_neg []
+for be... objects list is: [blanks]
+expression (attr & neg) is...  & UOM  None
+attrs in get_attr_neg []
+expression (conditons formatted) is.. {'left_side': '$$Name.Last', 'right_side': "{'attr_negation': [[], [], [], ['can', 'not', 'be'], [(None, None, None)]], 'expression': '$can not be()', 'dobj_acl': [[], []], 'prep_pobj': {}}"}
+from nlu: []
+[{"rule_action": "$can not be left", "rule_actors": ["'s", "(PROPN)", "$$Name", "(PART)", "Last", "$$Primary Insured"], "rule_valid_values": {"value": ["$$blanks"], "value_uom": "$None"}, "rule_applicability": ["$ALL"]}]
+Root element :  [] derived
+checkin condtion for nlu.find_tokens_for_be.. derive
+applicability ents form: ['$$New Business']
+from nlu: []
+Root element :  [] 1
+Root element :  [] date
+checkin condtion for nlu.find_tokens_for_be.. date
+from nlu: []
+consider this part of previous rule Driver birth date.
+
+Entities: [('Driver birth date', 'CUSTOM')]
+Root element :  [] 2
+Root element :  [] date
+checkin condtion for nlu.find_tokens_for_be.. date
+from nlu: []
+consider this part of previous rule Effective date.
+
+Entities: [('Effective date', 'CUSTOM')]
+Root element :  [] derived
+checkin condtion for nlu.find_tokens_for_be.. derive
+applicability ents form: ['$$Endorsement', '$$states']
+from nlu: []
+Root element :  [] 1
+Root element :  [] date
+checkin condtion for nlu.find_tokens_for_be.. date
+from nlu: []
+consider this part of previous rule Driver birth date.
+
+Entities: [('Driver birth date', 'CUSTOM')]
+Root element :  [] 2
+Root element :  [] date
+checkin condtion for nlu.find_tokens_for_be.. date
+from nlu: []
+consider this part of previous rule Endorsement Effective date.
+
+
+Entities: [('Endorsement Effective date', 'CUSTOM')]
+Root element :  [] derived
+checkin condtion for nlu.find_tokens_for_be.. derive
+applicability ents form: ['$$states', '$$MI', 'MN', '$$NJ', '$$SC', '$$CA', '$$TX', 'and', '$$SRM', '6', '$$states']
+from nlu: [However, None]
+conditions... [However]
+Root element :  [] date
+checkin condtion for nlu.find_tokens_for_be.. date
+from nlu: []
+consider this part of previous rule Driver birth date.
+
+Entities: [('Driver birth date', 'CUSTOM')]
+Root element :  [] 2
+Root element :  [] date
+checkin condtion for nlu.find_tokens_for_be.. date
+from nlu: []
+consider this part of previous rule Policy term effective date
+
+Entities: [('Policy term effective date', 'CUSTOM')]
+Root element :  [] derived
+checkin condtion for nlu.find_tokens_for_be.. derive
+from nlu: [If, the, existing, driver, a, policy, was, on, added, None, when, one, the, below, conditions, are, met, None]
+conditions... [If, the, existing, driver, a, policy, was, on, added]
+attrs in get_attr_neg []
+conditions... [when, one, the, below, conditions, are, met]
+attrs in get_attr_neg []
+Root element :  [] is
+checkin condtion for nlu.find_tokens_for_be.. be
+calling nlu.find_tokens_for_be.. using right_side approach
+attrs in get_attr_neg []
+temp_exprs is:  (None, None, None)
+expression (attr & neg) is...  & UOM $greater than($$term effective age) None
+attrs in get_attr_neg []
+temp_exprs is:  (None, None, None)
+expression (conditons formatted) is.. {'left_side': '$$Calculated driver age', 'right_side': "{'attr_negation': [[], [], [], [], [(greater, than, age)]], 'expression': '$greater than($$term effective age)', 'dobj_acl': [[], []], 'prep_pobj': {}}"}
+from nlu: []
+Root element :  [] Note
+checkin condtion for nlu.find_tokens_for_be.. note
+from nlu: []
+Root element :  [] Refer
+checkin condtion for nlu.find_tokens_for_be.. refer
+from nlu: []
+[{"rule_action": "$derived", "rule_actors": ["$$Driver age"], "rule_valid_values": {"value": ["$$two", "$$Driver birth date", "$$Effective date"], "value_uom": "$None"}, "rule_applicability": ["$$New Business"]}, {"rule_action": "$derived", "rule_actors": ["$$Driver age"], "rule_valid_values": {"value": ["$$two", "$$Driver birth date", "$$Endorsement Effective date"], "value_uom": "$None"}, "rule_applicability": ["$$Endorsement", "$$states"]}, {"rule_action": "$derived", "rule_actors": ["$$driver age"], "rule_valid_values": {"value": ["$$attributes", "$$Driver birth date", "$$Policy term effective date"], "value_uom": "$None"}, "rule_applicability": ["$$states", "$$MI", "MN", "$$NJ", "$$SC", "$$CA", "$$TX", "and", "$$SRM", "6", "$$states"], "rule_conditions": [{"condition": "$However"}]}, {"rule_action": "$derived", "rule_actors": ["$$driver age"], "rule_valid_values": {"value": ["$$Driver birth date"], "value_uom": "$None"}, "rule_applicability": ["$$states", "$$MI", "MN", "$$NJ", "$$SC", "$$CA", "$$TX", "and", "$$SRM", "6", "$$states"], "rule_conditions": [{"condition": "$If", "action": "$added", "attributes": ["the", "existing", "$$driver", "a", "$$policy", "was", "on"], "attr_newadded": {"left_side": "$$policy.$$driver.existing", "right_side": "{'attr_negation': [[], [], [], [], [(None, None, None)]], 'expression': '', 'dobj_acl': [[], []], 'prep_pobj': {on: [[date], [], [None]]}}"}}, {"condition": "$when", "action": "$met", "attributes": ["one", "the", "below", "$$conditions", "are"], "attr_newmet": {"left_side": "$$conditions.one", "right_side": "{'attr_negation': [[], [], [], [], [(None, None, None)]], 'expression': '', 'dobj_acl': [[], []], 'prep_pobj': {}}"}}]}, {"rule_action": "$is", "rule_actors": ["$$Calculated driver age", "is", "(VERB)", "$$Rating state"], "rule_valid_values": {"value": ["$greater than($$term effective age)"], "value_uom": "$None"}, "rule_applicability": ["$$states", "$$MI", "MN", "$$NJ", "$$SC", "$$CA", "$$TX", "and", "$$SRM", "6", "$$states"]}, {"rule_action": "$Note", "rule_actors": [], "rule_valid_values": {"value": [], "value_uom": "$None"}, "rule_applicability": ["$$states", "$$MI", "MN", "$$NJ", "$$SC", "$$CA", "$$TX", "and", "$$SRM", "6", "$$states"]}, {"rule_action": "$Refer", "rule_actors": [], "rule_valid_values": {"value": ["$$list"], "value_uom": "$None"}, "rule_applicability": ["$$states", "$$MI", "MN", "$$NJ", "$$SC", "$$CA", "$$TX", "and", "$$SRM", "6", "$$states"]}]
+Root element :  ['must'] be
+checkin condtion for nlu.find_tokens_for_be.. be
+calling nlu.find_tokens_for_be.. using right_side approach
+attrs in get_attr_neg []
+temp_exprs is:  (None, None, None)
+expression (attr & neg) is...  & UOM $lesser than($$First Course Completion Date) None
+attrs in get_attr_neg []
+temp_exprs is:  (None, None, None)
+expression (conditons formatted) is.. {'left_side': '$$Defensive driver Second Course Completion Date', 'right_side': "{'attr_negation': [[], [], [], ['must'], [(lesser, than, Date)]], 'expression': '$must($lesser than($$First Course Completion Date))', 'dobj_acl': [[], []], 'prep_pobj': {}}"}
+from nlu: []
+[{"rule_action": "$must be", "rule_actors": ["$$Defensive driver Second Course Completion Date"], "rule_valid_values": {"value": ["$lesser than($$First Course Completion Date)"], "value_uom": "$None"}, "rule_applicability": ["$ALL"]}]
+Root element :  ['should'] be
+checkin condtion for nlu.find_tokens_for_be.. be
+calling nlu.find_tokens_for_be.. using right_side approach
+attrs in get_attr_neg []
+temp_exprs is:  (None, None, None)
+expression (attr & neg) is...  & UOM $greater than($$First Course Completion Date) None
+attrs in get_attr_neg []
+temp_exprs is:  (None, None, None)
+expression (conditons formatted) is.. {'left_side': '$$Defensive driver Second Course Completion Date', 'right_side': "{'attr_negation': [[], [], [], ['should'], [(greater, than, Date)]], 'expression': '$should($greater than($$First Course Completion Date))', 'dobj_acl': [[], []], 'prep_pobj': {}}"}
+from nlu: []
+[{"rule_action": "$should be", "rule_actors": ["$$Defensive driver Second Course Completion Date", "(VERB)", "(PRON)", "set", "it"], "rule_valid_values": {"value": ["$greater than($$First Course Completion Date)"], "value_uom": "$None"}, "rule_applicability": ["$ALL"]}]
+Root element :  ['must', 'be'] completed
+checkin condtion for nlu.find_tokens_for_be.. complete
+calling nlu.find_tokens_for_be.. using right_side approach
+attrs in get_attr_neg []
+for be... objects list is: []
+expression (attr & neg) is...  & UOM  None
+attrs in get_attr_neg []
+expression (conditons formatted) is.. {'left_side': '$$first course', 'right_side': "{'attr_negation': [[], [], [], ['must', 'be'], [(None, None, None)]], 'expression': '$must be()', 'dobj_acl': [[], []], 'prep_pobj': {For: [[First, Second, Course], [and, and], [None, None, None, None]], before: [[course], [], [None, None, None, None]]}}"}
+applicability ents form: ['$$First']
+from nlu: []
+[{"rule_action": "$must be completed", "rule_actors": ["$$first course"], "rule_valid_values": {"value": ["$$second", "$$course"], "value_uom": "$None"}, "rule_applicability": ["$$First"]}]
+Root element :  ['should'] be
+checkin condtion for nlu.find_tokens_for_be.. be
+calling nlu.find_tokens_for_be.. using right_side approach
+attrs in get_attr_neg []
+for be... objects list is: []
+expression (attr & neg) is...  & UOM  None
+attrs in get_attr_neg []
+expression (conditons formatted) is.. {'left_side': '$$Young driver course completion year', 'right_side': "{'attr_negation': [[], [], [], ['should'], [(None, None, None)]], 'expression': '$should()', 'dobj_acl': [[], []], 'prep_pobj': {above: [[years], [], [1800]]}}"}
+from nlu: []
+Root element :  [] selcted
+checkin condtion for nlu.find_tokens_for_be.. selct
+from nlu: [as, yes, then, Driver, Course, Completion, Date, can, not, empty, be, None]
+conditions... [as, yes, then, Driver, Course, Completion, Date, can, not, empty, be]
+attrs in get_attr_neg []
+[{"rule_action": "$should be", "rule_actors": ["$$Young driver course completion year", "be", "(VERB)", "$$completion date"], "rule_valid_values": {"value": ["1800", "$$years"], "value_uom": "$None"}, "rule_applicability": ["$ALL"]}, {"rule_action": "$selcted", "rule_actors": ["(ADJ)", "young", "$$Driver Training"], "rule_valid_values": {"value": [], "value_uom": "$None"}, "rule_applicability": ["$ALL"], "rule_conditions": [{"condition": "$as", "action": "$be", "attributes": ["yes", "then", "$$Driver Course Completion Date", "can", "not", "empty"], "attr_newbe": {"left_side": "$$Driver Course Completion Date", "right_side": "{'attr_negation': [[], [], [], ['can', 'not'], [(empty, None, None)]], 'expression': '$can not($empty)', 'dobj_acl': [[], []], 'prep_pobj': {}}"}}]}]
+Root element :  ['will', 'not', 'be'] set
+checkin condtion for nlu.find_tokens_for_be.. set
+calling nlu.find_tokens_for_be.. using right_side approach
+attrs in get_attr_neg []
+for be... objects list is: []
+expression (attr & neg) is...  & UOM  None
+attrs in get_attr_neg []
+expression (conditons formatted) is.. {'left_side': '$$Young Driver Flag', 'right_side': "{'attr_negation': [[], [], [], ['will', 'not', 'be'], [(None, None, None)]], 'expression': '$will not be()', 'dobj_acl': [[], []], 'prep_pobj': {to: [[C], [], [None]]}}"}
+from nlu: [when, number, years, 5, is, None]
+conditions... [when, number, years, 5, is]
+attrs in get_attr_neg [5]
+Root element :  ['will', 'be'] set
+checkin condtion for nlu.find_tokens_for_be.. set
+calling nlu.find_tokens_for_be.. using right_side approach
+attrs in get_attr_neg []
+for be... objects list is: []
+expression (attr & neg) is...  & UOM  None
+attrs in get_attr_neg []
+expression (conditons formatted) is.. {'left_side': '$$Young Driver Flag', 'right_side': "{'attr_negation': [[], [], [], ['will', 'be'], [(None, None, None)]], 'expression': '$will be()', 'dobj_acl': [[], []], 'prep_pobj': {to: [[D], [], [None]]}}"}
+from nlu: [when, number, years, above, is, None]
+conditions... [when, number, years, above, is]
+attrs in get_attr_neg []
+Root element :  ['will', 'be'] set
+checkin condtion for nlu.find_tokens_for_be.. set
+calling nlu.find_tokens_for_be.. using right_side approach
+attrs in get_attr_neg []
+for be... objects list is: []
+expression (attr & neg) is...  & UOM  None
+attrs in get_attr_neg []
+expression (conditons formatted) is.. {'left_side': '$$Young Driver Flag', 'right_side': "{'attr_negation': [[], [], [], ['will', 'be'], [(None, None, None)]], 'expression': '$will be()', 'dobj_acl': [[], []], 'prep_pobj': {to: [[D], [], [None]]}}"}
+from nlu: [when, number, years, 10, is, None]
+conditions... [when, number, years, 10, is]
+attrs in get_attr_neg [10, 20]
+Root element :  [] set
+checkin condtion for nlu.find_tokens_for_be.. set
+applicability ents form: ['$$default']
+from nlu: []
+Root element :  ['not'] is
+checkin condtion for nlu.find_tokens_for_be.. be
+calling nlu.find_tokens_for_be.. using right_side approach
+attrs in get_attr_neg []
+temp_exprs is:  (None, None, None)
+expression (attr & neg) is...  & UOM $applicable for($$SBO Types-Cancel Rewrite) None
+attrs in get_attr_neg []
+temp_exprs is:  (None, None, None)
+expression (conditons formatted) is.. {'left_side': 'rule', 'right_side': "{'attr_negation': [[], [], [], ['not'], [(applicable, for, Rewrite)]], 'expression': '$not($applicable for($$SBO Types-Cancel Rewrite))', 'dobj_acl': [[], []], 'prep_pobj': {}}"}
+from nlu: []
+[{"rule_action": "$will not be set", "rule_actors": ["$$Young Driver Flag"], "rule_valid_values": {"value": ["C"], "value_uom": "$None"}, "rule_applicability": ["$ALL"], "rule_conditions": [{"condition": "$when", "action": "$is", "attributes": ["$$number", "$$years", "5"], "attr_newis": {"left_side": "$$years.$$number", "right_side": "{'attr_negation': [['5'], [], [], [], [(less, than, None)]], 'expression': '$less than(5)', 'dobj_acl': [[], []], 'prep_pobj': {}}"}}]}, {"rule_action": "$will be set", "rule_actors": ["$$Young Driver Flag"], "rule_valid_values": {"value": ["D"], "value_uom": "$None"}, "rule_applicability": ["$ALL"], "rule_conditions": [{"condition": "$when", "action": "$is", "attributes": ["$$number", "$$years", "above"], "attr_newis": {"left_side": "$$years.$$number", "right_side": "{'attr_negation': [[], [], [], [], [(None, None, None)]], 'expression': '', 'dobj_acl': [[], []], 'prep_pobj': {above: [[5], [], [None]]}}"}}]}, {"rule_action": "$will be set", "rule_actors": ["$$Young Driver Flag"], "rule_valid_values": {"value": ["D"], "value_uom": "$None"}, "rule_applicability": ["$ALL"], "rule_conditions": [{"condition": "$when", "action": "$is", "attributes": ["$$number", "$$years", "10"], "attr_newis": {"left_side": "$$years.$$number", "right_side": "{'attr_negation': [['10', '20'], [and], [], [], [(greater, than, None), (less, than, None)]], 'expression': '$and($greater than(10),$less than(20))', 'dobj_acl': [[], []], 'prep_pobj': {}}"}}]}, {"rule_action": "$set", "rule_actors": ["$$Young Driver Flag"], "rule_valid_values": {"value": ["E"], "value_uom": "$None"}, "rule_applicability": ["$$default"]}, {"rule_action": "$not is", "rule_actors": ["(NOUN)", "rule"], "rule_valid_values": {"value": ["$applicable for($$SBO Types-Cancel Rewrite)"], "value_uom": "$None"}, "rule_applicability": ["$$default"]}]
+Root element :  ['can', 'not'] be
+checkin condtion for nlu.find_tokens_for_be.. be
+calling nlu.find_tokens_for_be.. using right_side approach
+attrs in get_attr_neg []
+for be... objects list is: []
+expression (attr & neg) is...  & UOM  None
+attrs in get_attr_neg []
+expression (conditons formatted) is.. {'left_side': '$$Product Type', 'right_side': "{'attr_negation': [[], [], [], ['can', 'not'], [(None, None, None)]], 'expression': '$can not()', 'dobj_acl': [[], []], 'prep_pobj': {above: [[characters], [], [20]]}}"}
+from nlu: []
+[{"rule_action": "$can not be", "rule_actors": ["$$Product Type"], "rule_valid_values": {"value": ["20", "$$characters"], "value_uom": "$None"}, "rule_applicability": ["$ALL"]}]
+
+D:\Ananth\Allstate\spacy\source>

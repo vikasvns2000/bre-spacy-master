@@ -1,0 +1,9 @@
+Product Type cannot be blank.
+Surname length should be less than 20 characters and allowed special characters are Alphabets with space, hyphen (-), Apostrophe (').
+No other special characters other than the listed is allowed for surname of additional child and other person details.
+Conviction year for the incident should not be less than 1900 and greater than 2050.
+The address line 1 of the previous address field cannot exceed 25 characters.
+When accident violations are present for an occupant, Occurrence date should not be greater than Current date.
+When accident violations are present for an occupant, Conviction date should not be greater than Current date
+Conviction date cannot be prior to occurrence Date for accidents/violations declared on the Declare Incidents screen.
+Incident type (Accident/violation) cannot be Select One.
